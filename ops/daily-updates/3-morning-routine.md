@@ -20,19 +20,21 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
 
 ## Client map
 
-Claude reads from this list. Fill the blanks once and keep it current when a sprint rolls over.
+Claude reads from this list. Update it when a sprint rolls over.
 
-| Client | Service | ClickUp sprint list | Notion pipeline | Client channel | Strategy channel | Editing channel |
-|---|---|---|---|---|---|---|
-| Atolea | SE | Sprint 9 (9/7 to 10/4) | _add link_ | _not found_ | #strategy-atolea-lil | n/a |
-| Madam Muse | SE | Sprint 3 (9/21 to 10/18) | _add link_ | #madammuse-client | #madammuse-strategy-areeb | n/a |
-| Tulas | SE | Sprint 4 (9/7 to 10/11) | _add link_ | #tulas-client | #tulas-strategy-lil | n/a |
-| Carbinox | SE | _current sprint missing_ (only Sprint 21, 10/19 to 11/15) | _add link_ | _not found_ | #strategy-carbinox-areeb, #strategy-carbinox-lil | #editors-carbinox |
-| LuxFord Tech | SE | Sprint 1 (9/14 to 10/11) | _add link_ | #luxfordtech-client | #luxfordtech-strategy | n/a |
-| Longwell & Co | SE | Sprint 1 (9/14 to 10/18) | _add link_ | #longwellco-client | #longwellco-strategy | n/a |
-| Napper | SE | Sprint 1 (9/28 to 10/25) | _add link_ | #napper-client | #napper-strategy | n/a |
-| Earthling Co | DFY | Sprint 1 (9/21 to 10/18) | n/a | #eathlingco-client | #earthlingco-strategy | #earthlingco-editing |
-| Ivy Food Scanning App | Production | Sprint 1 (9/21 to 10/18) | n/a | #ivy-client | #ivy-strategist-kofoshi | #ivy-video-editors |
+| Client | Service | Client contact | ClickUp sprint list | Notion pipeline | Client channel | Strategy channel | Editing channel |
+|---|---|---|---|---|---|---|---|
+| Atolea | SE | n/a | Sprint 9 (9/7 to 10/4) | [link](https://app.notion.com/p/atolea-jewelry/2f4cdc5947bc804b822fc9fb18ce88ea?v=2f4cdc5947bc81158396000c6e6b4df2) | none, skip client update | #strategy-atolea-lil | n/a |
+| Madam Muse | SE | Ronan | Sprint 3 (9/21 to 10/18) | [link](https://app.notion.com/p/3a50be0b949f80238d38d1e645494e12?v=3a50be0b949f8090be73000cf147f8bd) | #madammuse-client | #madammuse-strategy-areeb | n/a |
+| Tulas | SE | Nicolas | Sprint 4 (9/7 to 10/11) | [link](https://app.notion.com/p/105e60ba02f3826e8539810516b39a08?v=fa1e60ba02f382399e54081c9ebeb87e) | #tulas-client | #tulas-strategy-lil | n/a |
+| Carbinox | SE | n/a | Sprint 21 (10/19 to 11/15) | none, ClickUp only | none, skip client update | #strategy-carbinox-areeb, #strategy-carbinox-lil | #editors-carbinox |
+| LuxFord Tech | SE | Jordan | Sprint 1 (9/14 to 10/11) | [link](https://app.notion.com/p/Tok-Vibes-Strategy-Engine-3d64214161de80c5a7bcedea3b8f449f) | #luxfordtech-client | #luxfordtech-strategy | n/a |
+| Longwell & Co | SE | Saru | Sprint 1 (9/14 to 10/18) | [link](https://app.notion.com/p/3d531bb3a6708004afe5c5bde1844cc8?v=3d531bb3a670802d92b6000cdb9b18d2) | #longwellco-client | #longwellco-strategy | n/a |
+| Napper | SE | Marcus | Sprint 1 (9/28 to 10/25) | _add link_ | #napper-client | #napper-strategy | n/a |
+| Earthling Co | DFY | Kevin | Sprint 1 (9/21 to 10/18) | n/a | #eathlingco-client | #earthlingco-strategy | #earthlingco-editing |
+| Ivy Food Scanning App | Production | Ramzy | Sprint 1 (9/21 to 10/18) | n/a | #ivy-client | #ivy-strategist-kofoshi | #ivy-video-editors |
+
+Client pipelines live in each client's own Notion workspace, so Claude can't read them yet. Until access is sorted, Claude takes brief counts from ClickUp and you add the "produced" numbers in step 4.
 
 ## Speed tips
 
