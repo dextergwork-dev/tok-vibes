@@ -4,7 +4,7 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
 
 ## Daily steps
 
-1. *8:22 am ET, weekdays*: Claude runs on its own (scheduled). You get a push notification when drafts are ready.
+1. *8:22 am ET, weekdays*: Claude runs on its own in your "Tok-Vibes morning update" chat. Drafts wait in Slack.
 2. *Claude pulls* (about 3 min):
    - *ClickUp*: current sprint list per client. Counts by status. Flags anything 36h+ in one status.
    - *Notion*: each Strategy Engine pipeline. Briefs delivered this week vs 10, and how many the client's editors produced.
