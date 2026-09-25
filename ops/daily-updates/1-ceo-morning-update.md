@@ -1,6 +1,6 @@
 # CEO Morning Update
 
-Posted in the CEO Slack channel at 9:00 am. Reads in under 60 seconds.
+Posted in #ops-team at 9:00 am. Reads in under 60 seconds.
 
 ## Rules
 

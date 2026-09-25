@@ -4,19 +4,15 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
 
 ## Daily steps
 
-1. *8:30 am*: Open Claude and paste:
-   > Run the morning update. Today is [day].
+1. *8:22 am ET, weekdays*: Claude runs on its own (scheduled). You get a push notification when drafts are ready.
 2. *Claude pulls* (about 3 min):
    - *ClickUp*: current sprint list per client. Counts by status. Flags anything 36h+ in one status.
    - *Notion*: each Strategy Engine pipeline. Briefs delivered this week vs 10, and how many the client's editors produced.
    - *Slack*: last 24h (Monday: since Friday) in each client's `-client`, `-strategy`, `-editing` channels. Flags anyone waiting on feedback, footage, assets or approval.
 3. *Claude drafts* the CEO update from `1-ceo-morning-update.md` and lists anything it wasn't sure about.
 4. *You review* (3 to 5 min): fix owners and fixes on blockers.
-5. *Claude posts* it to the CEO channel at 9:00 am, or you paste it yourself.
-6. *Mon / Wed / Fri only*: say
-   > Draft the client updates.
-
-   Claude saves a Slack draft in each `-client` channel using `2-client-update.md`. You open each one, tweak, and hit send.
+5. *You send* the draft waiting in #ops-team by 9:00 am.
+6. *Mon / Wed / Fri only*: Claude also saves a Slack draft in each `-client` channel using `2-client-update.md`. You open each one, tweak, and hit send.
 
 ## Client map
 
@@ -30,7 +26,7 @@ Claude reads from this list. Update it when a sprint rolls over.
 | Carbinox | SE | n/a | Sprint 21 (10/19 to 11/15) | none, ClickUp only | none, skip client update | #strategy-carbinox-areeb, #strategy-carbinox-lil | #editors-carbinox |
 | LuxFord Tech | SE | Jordan | Sprint 1 (9/14 to 10/11) | [link](https://app.notion.com/p/Tok-Vibes-Strategy-Engine-3d64214161de80c5a7bcedea3b8f449f) | #luxfordtech-client | #luxfordtech-strategy | n/a |
 | Longwell & Co | SE | Saru | Sprint 1 (9/14 to 10/18) | [link](https://app.notion.com/p/3d531bb3a6708004afe5c5bde1844cc8?v=3d531bb3a670802d92b6000cdb9b18d2) | #longwellco-client | #longwellco-strategy | n/a |
-| Napper | SE | Marcus | Sprint 1 (9/28 to 10/25) | _add link_ | #napper-client | #napper-strategy | n/a |
+| Napper | SE | Marcus | Sprint 1 (9/28 to 10/25) | [link](https://app.notion.com/p/napper/Napper-Tok-Vibes-Pipeline-3e4de684f7f180d6a42ec0960f82dbd5) | #napper-client | #napper-strategy | n/a |
 | Earthling Co | DFY | Kevin | Sprint 1 (9/21 to 10/18) | n/a | #eathlingco-client | #earthlingco-strategy | #earthlingco-editing |
 | Ivy Food Scanning App | Production | Ramzy | Sprint 1 (9/21 to 10/18) | n/a | #ivy-client | #ivy-strategist-kofoshi | #ivy-video-editors |
 
@@ -40,4 +36,4 @@ Client pipelines live in each client's own Notion workspace, so Claude can't rea
 
 - Keep one ClickUp list per active sprint. When a sprint ends, archive it so Claude reads only the live one.
 - Tag blockers in Slack with a 🚧 reaction. Claude can find those in seconds.
-- Once this runs smoothly, turn it into a scheduled job: Claude drafts at 8:30 am every day, you just review and post.
+- To run it by hand any time, paste: "Run the morning update."
