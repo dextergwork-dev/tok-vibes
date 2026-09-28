@@ -4,7 +4,7 @@ Use this every time Ivy briefs go out to a creator. Swap the [brackets], keep ev
 
 How to fill it:
 - One link line per brief, named exactly like the ClickUp task (e.g. B0032 - UGC - Harvest Holland).
-- Link to the brief's Google Doc (share setting: anyone with the link can view).
+- Link each brief to its public ClickUp doc link (doc.clickup.com/...), not the internal app.clickup.com link. Open it in a private window first to check it works.
 - Subject line: `Your Ivy briefs are ready, [First name]`
 
 ---
@@ -12,8 +12,8 @@ How to fill it:
 Hi [First name],
 
 We're excited to have you working on the Ivy campaign! Your briefs are ready. Please find the links below:
-[B0XX - UGC - Creator Name](Google Doc link)
-[B0XX - UGC - Creator Name](Google Doc link)
+[B0XX - UGC - Creator Name](public ClickUp doc link)
+[B0XX - UGC - Creator Name](public ClickUp doc link)
 Please only film Version 1 (V1) of each brief. Versions 2 and 3 (V2 and V3) are included in the briefs for our Editors and do not need to be filmed by you.
 
 For each brief, please film the script as a talking head, speaking naturally to the camera. Be yourself, make it your own, and imagine you're simply explaining the product to a friend or sharing your genuine experience. If anything feels too much like an advertisement, feel free to adjust your delivery to keep it natural and authentic.
