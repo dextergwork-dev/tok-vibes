@@ -4,6 +4,8 @@ Posted Monday, Wednesday and Friday in each `brand-client` channel.
 
 ## Rules
 
+- No batch or creative IDs (like B012 or TOK05). Use counts only.
+- SMART: every line has a number, and every next step has an owner or a date.
 - Lead with what the client gets: what's ready and what it lets them do.
 - Use their first name. Thank them for something specific.
 - Only good news and next steps. If we need something, it's one friendly ask with a reason that helps them.

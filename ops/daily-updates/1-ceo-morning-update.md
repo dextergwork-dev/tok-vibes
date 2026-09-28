@@ -4,6 +4,8 @@ Posted in #ops-team at 9:00 am. Reads in under 60 seconds.
 
 ## Rules
 
+- No batch or creative IDs (like B012 or TOK05). Use counts only.
+- SMART: every line has a number, and every next step has an owner or a date.
 - Blockers go first, each with the fix and who owns it.
 - One line per client when things are fine. Batch detail only when something is blocked.
 - Status dot per client:
@@ -64,7 +66,7 @@ Waiting on client feedback · creator footage late · editor capacity · brief n
 🔴 1 blocked · 🟡 1 at risk · 🟢 7 on track
 
 *Blockers to clear today*
-🔴 *Earthling Co*: 3 edits waiting on client notes (Edit Feedback, 40h). Fix: ask for notes in #eathlingco-client by 12pm · Owner: Oli · Client told: today
+🔴 *Earthling Co*: 3 edits waiting on client notes (Edit Feedback, 40h). Fix: ask for notes by 12pm · Owner: Oli · Client told: today
 🟡 *Tulas*: 6/10 briefs, 4 due Fri. Fix: Lil to prioritize Tulas today · Owner: Lil
 
 *Strategy Engine* · briefs this week / 10 · produced by client
