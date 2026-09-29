@@ -2,6 +2,7 @@
 """Read a public (Share to web) Notion pipeline and print each batch's status.
 
 Usage: python3 ops/scripts/notion_pipeline.py <notion.site URL> [--all]
+Groups batches by status (hours since last edit, ⚠️ at 36h+).
 Hides Briefing rows unless --all is passed.
 """
 import datetime
@@ -37,6 +38,7 @@ def main():
     chunk = post(host, "loadPageChunk", {"pageId": page_id, "limit": 100,
                  "cursor": {"stack": []}, "chunkNumber": 0, "verticalColumns": False})
     space_id = None
+    groups = {}
     for record in chunk["recordMap"]["block"].values():
         block = unwrap(record)
         space_id = space_id or block.get("space_id")
@@ -59,8 +61,10 @@ def main():
                 continue
             edited = datetime.datetime.fromtimestamp(row["last_edited_time"] / 1000, datetime.timezone.utc)
             hours = (datetime.datetime.now(datetime.timezone.utc) - edited).total_seconds() / 3600
-            print(f"{props.get('Name', '').strip():6} | {status:18} | {props.get('Ad Format', ''):7} | "
-                  f"last edited {hours:.0f}h ago")
+            groups.setdefault(status, []).append(
+                f"{props.get('Name', '').strip()} ({props.get('Ad Format', '')}, {hours:.0f}h{' ⚠️' if hours >= 36 else ''})")
+    for status, rows in groups.items():
+        print(f"{status}: {len(rows)} batches · " + ", ".join(rows))
 
 
 if __name__ == "__main__":
