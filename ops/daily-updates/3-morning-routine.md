@@ -8,6 +8,7 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
 2. *Claude pulls* (about 3 min):
    - *ClickUp*: current sprint list per client. Counts by status. Flags anything 36h+ in one status.
    - *Notion*: each Strategy Engine pipeline. Briefs delivered this week vs 10, and how many the client's editors produced.
+   - *Editor flags*: only batches in Editing or Ready to Edit with no movement for 3+ days after they land in Notion. Never flag Idea or blank-status batches, those are still being drafted.
    - *Slack*: last 24h (Monday: since Friday) in each client's `-client`, `-strategy`, `-editing` channels. Flags anyone waiting on feedback, footage, assets or approval.
 3. *Claude drafts* the CEO update from `1-ceo-morning-update.md` and lists anything it wasn't sure about.
 4. *You review* (3 to 5 min): fix owners and fixes on blockers.
