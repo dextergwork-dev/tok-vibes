@@ -25,7 +25,7 @@ Claude reads from this list. Update it when a sprint rolls over.
 | Madam Muse | SE | Ronan | Sprint 3 (9/21 to 10/18) | [link](https://app.notion.com/p/3a50be0b949f80238d38d1e645494e12?v=3a50be0b949f8090be73000cf147f8bd) | not yet | #madammuse-client | #madammuse-strategy-areeb | n/a |
 | Tulas | SE | Nicolas | Sprint 4 (9/7 to 10/11) | [link](https://app.notion.com/p/105e60ba02f3826e8539810516b39a08?v=fa1e60ba02f382399e54081c9ebeb87e) | not yet | #tulas-client | #tulas-strategy-lil | n/a |
 | Carbinox | SE | n/a | Sprint 21 (10/19 to 11/15) | none, ClickUp only | not yet | none, skip client update | #strategy-carbinox-areeb, #strategy-carbinox-lil | #editors-carbinox |
-| LuxFord Tech | SE | Jordan | Sprint 1 (9/14 to 10/11) | [link](https://app.notion.com/p/Tok-Vibes-Strategy-Engine-3d64214161de80c5a7bcedea3b8f449f) | [link](https://docs.google.com/spreadsheets/d/151wVHlFroU72S5m-jGiPDOnKekvUeLWqf62IF7sn-lk/edit) | #luxfordtech-client | #luxfordtech-strategy | #luxfordtech-editors |
+| LuxFord Tech | SE | Jordan | Sprint 1 (9/14 to 10/11) | [link](https://cheddar-entrance-4f2.notion.site/Tok-Vibes-Strategy-Engine-3d64214161de80c5a7bcedea3b8f449f) (public) | [link](https://docs.google.com/spreadsheets/d/151wVHlFroU72S5m-jGiPDOnKekvUeLWqf62IF7sn-lk/edit) | #luxfordtech-client | #luxfordtech-strategy | #luxfordtech-editors |
 | Longwell & Co | SE | Saru | Sprint 1 (9/14 to 10/18) | [link](https://app.notion.com/p/3d531bb3a6708004afe5c5bde1844cc8?v=3d531bb3a670802d92b6000cdb9b18d2) | not yet | #longwellco-client | #longwellco-strategy | n/a |
 | Napper | SE | Marcus | Sprint 1 (9/28 to 10/25) | [link](https://app.notion.com/p/napper/Napper-Tok-Vibes-Pipeline-3e4de684f7f180d6a42ec0960f82dbd5) | not yet | #napper-client | #napper-strategy | n/a |
 | Earthling Co | DFY | Kevin | Sprint 1 (9/21 to 10/18) | n/a | [link](https://docs.google.com/spreadsheets/d/1fb25GX2McuASYJNvHGgX37PM5iyMTXKfOEgbS7ICHn8/edit) | #eathlingco-client | #earthlingco-strategy | #earthlingco-editing |
@@ -33,7 +33,7 @@ Claude reads from this list. Update it when a sprint rolls over.
 
 All client folders and trackers live in the main Drive: [Tok-Vibes Drive](https://drive.google.com/drive/folders/1zEc2aYXZdFLFz6K5vVWQNtEM3WD54JRY) > CLIENTS. New trackers start from `Deliveries | Template` there.
 
-Client pipelines live in each client's own Notion workspace, so Claude can't read them yet. Until access is sorted, Claude takes brief counts from ClickUp and you add the "produced" numbers in step 4.
+Client pipelines live in each client's own Notion workspace. When a pipeline is shared to web (a `notion.site` link, marked public above), Claude reads every status with `python3 ops/scripts/notion_pipeline.py <link>` and flags anything sitting 36h+. For the rest, Claude takes brief counts from ClickUp and you add the "produced" numbers in step 4. To unlock one, ask the client to turn on Share > Publish to web and paste the link here.
 
 ## Speed tips
 
