@@ -3,7 +3,7 @@
 
 Usage: python3 ops/scripts/notion_pipeline.py <notion.site URL> [--all]
 Groups batches by status (hours since last edit, ⚠️ at 36h+).
-Hides Briefing rows unless --all is passed.
+Hides Briefing rows unless --all is passed. --comments adds the latest 2 comments per batch.
 """
 import datetime
 import json
@@ -29,6 +29,19 @@ def text(prop):
     return "".join(part[0] for part in prop or [] if part[0] != "‣")
 
 
+def latest_comments(host, row_id, count=2):
+    chunk = post(host, "loadPageChunk", {"pageId": row_id, "limit": 100,
+                 "cursor": {"stack": []}, "chunkNumber": 0, "verticalColumns": False})
+    comments = [unwrap(c) for c in chunk["recordMap"].get("comment", {}).values()]
+    comments.sort(key=lambda c: c.get("created_time", 0))
+    lines = []
+    for c in comments[-count:]:
+        when = datetime.datetime.fromtimestamp(c.get("created_time", 0) / 1000, datetime.timezone.utc)
+        body = " ".join(text(c.get("text")).split())
+        lines.append(f"{when:%m-%d %H:%M} UTC: {body[:220]}")
+    return lines
+
+
 def main():
     url = sys.argv[1]
     host = re.search(r"https://([^/]+)", url).group(1)
@@ -39,6 +52,7 @@ def main():
                  "cursor": {"stack": []}, "chunkNumber": 0, "verticalColumns": False})
     space_id = None
     groups = {}
+    notes = []
     for record in chunk["recordMap"]["block"].values():
         block = unwrap(record)
         space_id = space_id or block.get("space_id")
@@ -61,10 +75,17 @@ def main():
                 continue
             edited = datetime.datetime.fromtimestamp(row["last_edited_time"] / 1000, datetime.timezone.utc)
             hours = (datetime.datetime.now(datetime.timezone.utc) - edited).total_seconds() / 3600
+            if "--comments" in sys.argv:
+                notes.append((props.get("Name", "").strip(), status, latest_comments(host, block_id)))
             groups.setdefault(status, []).append(
                 f"{props.get('Name', '').strip()} ({props.get('Ad Format', '')}, {hours:.0f}h{' ⚠️' if hours >= 36 else ''})")
     for status, rows in groups.items():
         print(f"{status}: {len(rows)} batches · " + ", ".join(rows))
+    for name, status, comments in notes:
+        if comments:
+            print(f"\n{name} ({status})")
+            for line in comments:
+                print(f"  {line}")
 
 
 if __name__ == "__main__":
