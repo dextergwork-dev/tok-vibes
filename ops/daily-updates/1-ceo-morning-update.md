@@ -6,6 +6,7 @@ Posted in #ops-team at 9:00 am. Reads in under 60 seconds.
 
 - No batch or creative IDs (like B012 or TOK05). Use counts only.
 - SMART: every line has a number, and every next step has an owner or a date.
+- Add a link to each client's current ClickUp sprint (and delivery tracker for DFY and Production).
 - Blockers go first, each with the fix and who owns it.
 - One line per client when things are fine. Batch detail only when something is blocked.
 - Status dot per client:
@@ -33,7 +34,7 @@ Posted in #ops-team at 9:00 am. Reads in under 60 seconds.
 🟢 Longwell & Co · [#]/10 · [#] produced · Next: [#] briefs [day]
 🟢 Napper · [#]/10 · [#] produced · Next: [#] briefs [day]
 
-*Done-For-You · Earthling Co* 🟢
+*Done-For-You · Earthling Co* 🟢 (repeat for Hommey)
 Brief [#] · Edit [#] · Review [#] · Ready to Launch [#] · Launched [#]
 Ready to Launch this week: [#] · Next: [what moves, by when]
 
