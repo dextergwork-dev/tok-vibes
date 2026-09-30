@@ -1,6 +1,6 @@
 # CEO Morning Update
 
-Posted in #ops-team at 9:00 am. Reads in under 60 seconds.
+Posted in #ops-team at 9:00 am on Tuesday and Thursday. On Monday, Wednesday and Friday it is posted last, right after all client updates are out (see `4-client-update-flow.md`), so it is up to date. Reads in under 60 seconds.
 
 ## Rules
 

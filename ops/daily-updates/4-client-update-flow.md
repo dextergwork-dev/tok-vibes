@@ -5,8 +5,9 @@ The order we send client updates, brand by brand. Templates and phrasing live in
 ## When
 
 - Monday, Wednesday, Friday.
-- Start after the CEO update is posted in #ops-team (9:00 am), so blockers already have owners.
-- All client updates out by 11:00 am ET.
+- Client updates go first. The #ops-team update is sent last, only after every client update is out, so it reflects what clients were just told.
+- Use the 🔴 / 🟡 flags from this morning's routine draft to set priority.
+- Client updates and the #ops-team update all done by 11:00 am ET.
 
 ## Send order
 
@@ -24,13 +25,13 @@ Delivery clients go first. Their updates usually carry a feedback ask, and askin
 | 8 | Napper | SE | Marcus | #napper-client | Strategy Engine |
 | skip | Atolea, Carbinox | SE | n/a | no client channel | none |
 
-Inside a service, a 🔴 or 🟡 brand from today's CEO update moves to the top.
+Inside a service, a 🔴 or 🟡 brand in this morning's routine draft moves to the top.
 
 ## Flowchart
 
 ```mermaid
 flowchart TD
-    A([Mon / Wed / Fri<br/>CEO update posted 9:00 am]) --> B{Which day?}
+    A([Mon / Wed / Fri<br/>Morning routine draft ready]) --> B{Which day?}
     B -->|Monday| B1[Cover Fri to Mon<br/>Frame: plan for the week]
     B -->|Wednesday| B2[Cover Mon to Wed<br/>Frame: progress so far]
     B -->|Friday| B3[Cover Wed to Fri<br/>Frame: week wrap + what lands Monday]
@@ -59,7 +60,7 @@ flowchart TD
 
     R --> S{More brands?}
     S -->|Yes| C
-    S -->|No| T([Done by 11:00 am ET])
+    S -->|No| X[Post #ops-team update<br/>now reflects client updates] --> T([Done by 11:00 am ET])
 
     R -.-> U{Client replies?}
     U -->|Yes| V[Reply same business day<br/>in the thread]
@@ -82,3 +83,5 @@ flowchart TD
 4. One ask at most, with the reason it helps them.
 5. Rules pass: counts only, no links, 5 to 8 lines, first name, something specific to thank them for.
 6. Posted in the brand's client channel.
+
+When all brands are done, post the #ops-team update last.

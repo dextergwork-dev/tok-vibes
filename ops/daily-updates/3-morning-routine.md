@@ -11,7 +11,7 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
    - *Slack*: last 24h (Monday: since Friday) in each client's `-client`, `-strategy`, `-editing` channels. Flags anyone waiting on feedback, footage, assets or approval.
 3. *Claude drafts* the CEO update from `1-ceo-morning-update.md` and lists anything it wasn't sure about.
 4. *You review* (3 to 5 min): fix owners and fixes on blockers.
-5. *You copy* the CEO update from the chat and post it in #ops-team by 9:00 am.
+5. *You copy* the CEO update from the chat and post it in #ops-team by 9:00 am (Tue / Thu). On Mon / Wed / Fri, send client updates first and post the #ops-team update last, once they are all out.
 6. *Client updates* (Mon / Wed / Fri) come from each client's own chat, not this routine.  Send order and flow: `4-client-update-flow.md`.
 
 ## Client map
