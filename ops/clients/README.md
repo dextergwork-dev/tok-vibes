@@ -83,7 +83,7 @@ Posted Monday, Wednesday, Friday. Follow `ops/daily-updates/2-client-update.md` 
 
 ## Ads Roadmap (strategist owns it)
 
-Every Strategy Engine client has an Ads Roadmap sheet, linked in the client file and in Quick Links. Agreed with Oli (Kiana Sync Sep 28, Oli <> Dexter Sync Sep 29):
+Each brand has its own Ads Roadmap sheet (never shared across brands), linked in that client's file and in Quick Links. If the link is blank, ask the strategist for it. Agreed with Oli (Kiana Sync Sep 28, Oli <> Dexter Sync Sep 29):
 
 - The strategist fills it in for every batch. No batch is done without its roadmap entry.
 - Each entry covers avatar, angle, desire, awareness stage, format and hypothesis, then the result once it's live (winner or loser), so we learn what works.

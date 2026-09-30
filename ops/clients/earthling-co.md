@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Earthling Co. Fill the blanks 
 | Notion engine | n/a (DFY, tracked in ClickUp) |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

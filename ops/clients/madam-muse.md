@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Madam Muse. Fill the blanks as
 | Notion engine | https://app.notion.com/p/3a50be0b949f80238d38d1e645494e12?v=3a50be0b949f8090be73000cf147f8bd |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

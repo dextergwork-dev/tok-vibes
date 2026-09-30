@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Carbinox. Fill the blanks as y
 | Notion engine | none, ClickUp only |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

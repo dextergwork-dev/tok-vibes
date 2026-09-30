@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on LuxFord Tech. Fill the blanks 
 | Notion engine | https://app.notion.com/p/Tok-Vibes-Strategy-Engine-3d64214161de80c5a7bcedea3b8f449f |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

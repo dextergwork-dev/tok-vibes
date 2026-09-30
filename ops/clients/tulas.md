@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Tulas. Fill the blanks as you 
 | Notion engine | https://app.notion.com/p/105e60ba02f3826e8539810516b39a08?v=fa1e60ba02f382399e54081c9ebeb87e |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

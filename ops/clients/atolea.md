@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Atolea. Fill the blanks as you
 | Notion engine | https://app.notion.com/p/atolea-jewelry/2f4cdc5947bc804b822fc9fb18ce88ea?v=2f4cdc5947bc81158396000c6e6b4df2 |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

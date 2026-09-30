@@ -38,6 +38,7 @@ Copy this file to `ops/clients/<client>.md` and fill it in. Claude reads it befo
 | ClickUp sprint list | |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Ads roadmap | |
 | Research doc | |
 | Daily brief routine | trigger ID |
@@ -58,6 +59,7 @@ Copy this file to `ops/clients/<client>.md` and fill it in. Claude reads it befo
 - [ ] Strategy + editing channels with Quick Links canvas
 - [ ] Frame.io set up (theirs or ours)
 - [ ] Delivery tracker + Sprint 1 Drive folder (DFY)
+- [ ] Ads Roadmap sheet for this client, linked above and in Quick Links
 - [ ] Raw footage received
 - [ ] Research doc delivered to client
 - [ ] Daily 8 AM brief routine set up

@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Napper. Fill the blanks as you
 | Notion engine | https://app.notion.com/p/napper/Napper-Tok-Vibes-Pipeline-3e4de684f7f180d6a42ec0960f82dbd5 |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates

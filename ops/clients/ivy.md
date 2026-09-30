@@ -39,6 +39,7 @@ Client file. Claude reads this before any work on Ivy Food Scanning App. Fill th
 | Notion engine | n/a (Production, tracked in ClickUp) |
 | Drive folder | |
 | Delivery tracker | |
+| Ads Roadmap (strategist updates it) | |
 | Daily brief routine | not set up |
 
 ## Key dates
