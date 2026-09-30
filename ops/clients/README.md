@@ -31,6 +31,8 @@ Always check all of these before answering. Use the IDs in the client file.
 - *Slack*: `<client>-client`, `<client>-strategy`, `<client>-editing`, plus client mentions in #ops-team and #billingqueue. Open threads with replies.
 - *ClickUp*: billing task in Billing Queue, onboarding form response, Ads Strategist Dashboard, sprint list in the Engine space. Read task comments and replies, that's where Oli leaves instructions.
 - *Google Drive*: the client folder (brand deck, reviews CSV, performance decks, signed SOW).
+- *Notion*: the client's engine (Strategy Engine clients), link in the client file. Batch statuses: Edit Review, Ready to Launch, Launched.
+- *Fireflies*: calls from the last 7 days that mention the client (syncs, strategist calls, client calls). Pull action items and decisions.
 - *Onboarding map*: [Client Signed to Machine Running](https://claude.ai/artifact/WBbxJXMwQeibeREtaoWjnB) for the full process.
 
 ## 1. Onboarding check
