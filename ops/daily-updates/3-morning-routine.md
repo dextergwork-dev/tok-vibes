@@ -4,14 +4,14 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
 
 ## Daily steps
 
-1. *8:22 am ET, weekdays*: Claude runs on its own in your "Tok-Vibes morning update" chat. Drafts wait in Slack.
+1. *8:22 am ET, weekdays*: Claude runs on its own in your "Tok-Vibes morning update" chat. Drafts show up in that chat, never in Slack.
 2. *Claude pulls* (about 3 min):
    - *ClickUp*: current sprint list per client. Counts by status. Flags anything 36h+ in one status.
    - *Notion*: each Strategy Engine pipeline. Briefs delivered this week vs 10, and how many the client's editors produced.
    - *Slack*: last 24h (Monday: since Friday) in each client's `-client`, `-strategy`, `-editing` channels. Flags anyone waiting on feedback, footage, assets or approval.
 3. *Claude drafts* the CEO update from `1-ceo-morning-update.md` and lists anything it wasn't sure about.
 4. *You review* (3 to 5 min): fix owners and fixes on blockers.
-5. *You send* the draft waiting in #ops-team by 9:00 am.
+5. *You copy* the draft from the chat and post it in #ops-team by 9:00 am.
 6. *Mon / Wed / Fri only*: client updates are drafted in each client's own Claude chat (see `ops/clients/README.md`), not as Slack drafts. You copy, tweak, and send.
 
 ## Client map
