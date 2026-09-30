@@ -32,6 +32,8 @@ Always check all of these before answering. Use the IDs in the client file.
 - *ClickUp*: billing task in Billing Queue, onboarding form response, Ads Strategist Dashboard, sprint list in the Engine space. Read task comments and replies, that's where Oli leaves instructions.
 - *Google Drive*: the client folder (brand deck, reviews CSV, performance decks, signed SOW).
 - *Notion*: the client's engine (Strategy Engine clients), link in the client file. Batch statuses: Edit Review, Ready to Launch, Launched.
+- *Delivery tracker* (Google Sheet): what's Ready to Launch vs Launched, with launch dates. Flag anything in Notion that the tracker doesn't match.
+- *Ads Roadmap* (Google Sheet): the strategist's record per batch. Flag batches in the sprint with no roadmap entry, and when it was last edited.
 - *Fireflies*: calls from the last 7 days that mention the client (syncs, strategist calls, client calls). Pull action items and decisions.
 - *Onboarding map*: [Client Signed to Machine Running](https://claude.ai/artifact/WBbxJXMwQeibeREtaoWjnB) for the full process.
 
@@ -77,6 +79,15 @@ Posted Monday, Wednesday, Friday. Follow `ops/daily-updates/2-client-update.md` 
 - Use their name, warm opener, thank them.
 - What they have to work with, the timeline, one gentle ask.
 - End with "drop anything you need from the client here and I'll chase it".
+- If the Ads Roadmap is behind, include one gentle ask to fill it in for the missing batches.
+
+## Ads Roadmap (strategist owns it)
+
+Every Strategy Engine client has an Ads Roadmap sheet, linked in the client file and in Quick Links. Agreed with Oli (Kiana Sync Sep 28, Oli <> Dexter Sync Sep 29):
+
+- The strategist fills it in for every batch. No batch is done without its roadmap entry.
+- Each entry covers avatar, angle, desire, awareness stage, format and hypothesis, then the result once it's live (winner or loser), so we learn what works.
+- Ops (Dexter) checks it in the daily brief and nudges the strategist when batches are missing.
 
 ## 4. Emails to the client
 
