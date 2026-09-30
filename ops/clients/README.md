@@ -115,6 +115,24 @@ Mark anything Claude couldn't reach (Ads Manager, Atria, Reddit) as "to fill" in
 
 Set up once per client, in that client's own chat: a routine at 7:52 AM New York time that fires into that same chat. It reads all sources above (read-only) and replies in the chat with: status line, what moved, waiting on client, your to-dos. On Mon/Wed/Fri it adds the client update + strategist note drafts (section 3) as text in the chat, never as Slack drafts.
 
+Every day, sort the Notion pipeline by who owns the next step and draft one message per audience (text in the chat only):
+
+| Status in Notion | Who | Draft |
+|---|---|---|
+| Revision Needed | Editors (`<client>-editors`) | Tag each editor by name with their batches. Ask to move back to Edit Review when done. |
+| Edit Review | Strategist (`<client>-strategy`) | List the batches waiting on their review. |
+| Brief Review | Oli | List the briefs waiting on his review, and how long each has waited. |
+| Ready for Launch | Client (`<client>-client`) | What's ready and in the delivery tracker. Ask to flip to Launched when live. |
+| Launched | Client | Thank them, and what's live since the last update. |
+
+*Weekly volume check (10 batches per week per strategist):*
+
+1. Find the current week in ClickUp (Week task in the sprint list, its due date and B0xx subtasks).
+2. Count this week's batches in Notion by status: Brief Review, Briefing, Ideation or blank, and how many of the 10 aren't in Notion yet.
+3. Compare with ClickUp statuses and flag where ClickUp is behind Notion.
+4. If the week is past due, say by how much, and search Slack (channels and DMs) for the strategist asking for an extension. Report yes or no, with the message if yes.
+5. Put the count in the strategist draft, e.g. "3 in brief review, 2 in ideation, 5 still to add, due yesterday".
+
 ## Writing rules for everything
 
 - No em dashes.
