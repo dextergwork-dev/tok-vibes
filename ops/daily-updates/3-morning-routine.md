@@ -28,6 +28,7 @@ Claude reads from this list. Update it when a sprint rolls over.
 | Longwell & Co | SE | Saru | Sprint 1 (9/14 to 10/18) | [link](https://app.notion.com/p/3d531bb3a6708004afe5c5bde1844cc8?v=3d531bb3a670802d92b6000cdb9b18d2) | #longwellco-client | #longwellco-strategy | n/a |
 | Napper | SE | Marcus | Sprint 1 (9/28 to 10/25) | [link](https://app.notion.com/p/napper/Napper-Tok-Vibes-Pipeline-3e4de684f7f180d6a42ec0960f82dbd5) | #napper-client | #napper-strategy | n/a |
 | Earthling Co | DFY | Kevin | Sprint 1 (9/21 to 10/18) | n/a | #eathlingco-client | #earthlingco-strategy | #earthlingco-editing |
+| Hommey | DFY | Jessica, Justin | Sprint 1 (9/28 to 10/25) | n/a | #hommey-client | #hommey-strategy | #hommey-editing |
 | Ivy Food Scanning App | Production | Ramzy | Sprint 1 (9/21 to 10/18) | n/a | #ivy-client | #ivy-strategist-kofoshi | #ivy-video-editors |
 
 Client pipelines live in each client's own Notion workspace, so Claude can't read them yet. Until access is sorted, Claude takes brief counts from ClickUp and you add the "produced" numbers in step 4.
