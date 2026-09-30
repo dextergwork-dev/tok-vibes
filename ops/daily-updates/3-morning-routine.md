@@ -12,7 +12,7 @@ Run this with Claude each morning. Claude pulls the data, you review and send.
 3. *Claude drafts* the CEO update from `1-ceo-morning-update.md` and lists anything it wasn't sure about.
 4. *You review* (3 to 5 min): fix owners and fixes on blockers.
 5. *You send* the draft waiting in #ops-team by 9:00 am.
-6. *Mon / Wed / Fri only*: Claude also saves a Slack draft in each `-client` channel using `2-client-update.md`. You open each one, tweak, and hit send.
+6. *Mon / Wed / Fri only*: client updates are drafted in each client's own Claude chat (see `ops/clients/README.md`), not as Slack drafts. You copy, tweak, and send.
 
 ## Client map
 

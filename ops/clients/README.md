@@ -21,7 +21,7 @@ Say one of these in Claude Code. Claude reads `ops/clients/<client>.md` first, t
 | "Research [client]" | Research doc following the Ads Strategist Dashboard, step by step |
 | "Every 8am, update me on [client]" | Sets up the daily brief routine |
 
-Claude drafts. You send. Claude never posts, emails or changes anything unless you say so.
+Claude drafts in the chat only. You copy and send. Claude never saves drafts in Slack or Gmail, and never posts, emails or changes anything unless you say so.
 
 ## Where Claude looks
 
@@ -102,7 +102,7 @@ Mark anything Claude couldn't reach (Ads Manager, Atria, Reddit) as "to fill" in
 
 ## 6. Daily 8 AM brief
 
-Set up once per client with a routine at 7:52 AM New York time, into this chat. It reads Gmail, Slack and ClickUp (read-only) and returns: status line, what moved, waiting on client, your to-dos. On Mon/Wed/Fri it adds the client update + strategist note drafts (section 3).
+Set up once per client, in that client's own chat: a routine at 7:52 AM New York time that fires into that same chat. It reads all sources above (read-only) and replies in the chat with: status line, what moved, waiting on client, your to-dos. On Mon/Wed/Fri it adds the client update + strategist note drafts (section 3) as text in the chat, never as Slack drafts.
 
 ## Writing rules for everything
 
