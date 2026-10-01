@@ -12,7 +12,7 @@ Filled example of `_template.md`. Last updated Wed Sep 30, 2026.
 | Volume | 10 batches per week |
 | Geo | AU + NZ, US |
 | Product focus | Bedding first, then robes, bath. Dining after launch |
-| KPIs | 3+ ROAS, CTR from under 0.7% to 1%+ |
+| KPIs | ROAS 3.5, CTR 1.2%. CAC: Bed A$82 / US$80, Bath A$67 / US$64, Robe A$43 / US$50 (Jessica, Sep 30) |
 | Kickoff (Sprint 1 start) | Mon Sep 28, 2026 |
 | Rate | $16,000 every 4 weeks |
 | Strategist (internal only) | Kofoshi |
