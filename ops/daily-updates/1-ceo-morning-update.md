@@ -18,33 +18,23 @@ Posted in #ops-team at 9:00 am. Reads in under 60 seconds.
 ## Template (paste into Slack)
 
 ```
-*Morning Update · [Day, Mon DD]*
-🔴 [#] blocked · 🟡 [#] at risk · 🟢 [#] on track
+*Ops Update · [Day, Mon DD]:* 🔴 [#] blockers · 🟡 [#] at risk
 
 *Blockers to clear today*
-🔴 *[Client]*: [what is stuck] ([status], [#]h). Fix: [action] · Owner: [name] · Client told: [yes / today]
-🟡 *[Client]*: [what is at risk]. Fix: [action] · Owner: [name]
+🔴 *[Client]:* [what is stuck, with counts]. Fix: [action] by [time] · Owner: [name] · [Client Pipeline link]
+🟡 *[Client]:* [what is at risk]. Owner: [name] · [Client Pipeline link]
 
-*Strategy Engine* · briefs this week / 10 · produced by client
-🟢 Atolea · [#]/10 · [#] produced · Next: [#] briefs [day]
-🟢 Madam Muse · [#]/10 · [#] produced · Next: [#] briefs [day]
-🟢 Tulas · [#]/10 · [#] produced · Next: [#] briefs [day]
-🟢 Carbinox · [#]/10 · [#] produced · Next: [#] briefs [day]
-🟢 LuxFord Tech · [#]/10 · [#] produced · Next: [#] briefs [day]
-🟢 Longwell & Co · [#]/10 · [#] produced · Next: [#] briefs [day]
-🟢 Napper · [#]/10 · [#] produced · Next: [#] briefs [day]
+*Strategy Engine*
+🟢 *[Client] ·* [one short update with a count or date]
 
-*Done-For-You · Earthling Co* 🟢 (repeat for Hommey)
-Brief [#] · Edit [#] · Review [#] · Ready to Launch [#] · Launched [#]
-Ready to Launch this week: [#] · Next: [what moves, by when]
+*Done-For-You*
+🟢 *[Client] ·* [one short update]
 
-*Production · Ivy Food Scanning App* 🟢
-Brief [#] · Edit [#] · Review [#] · Ready to Launch [#] · Launched [#]
-Ready to Launch this week: [#] · Next: [what moves, by when]
-
-*Wins* (optional, 1 line)
-[Client]: [result or milestone]
+*Production*
+🟢 *[Client] ·* [one short update]
 ```
+
+Every blocker gets its pipeline link (Notion pipeline for SE clients, ClickUp sprint for DFY and Production). Clients listed under Blockers are left out of the engine sections. Engine lines are updates only, one line each.
 
 ## Status buckets (keeps DFY and Production to one line)
 
