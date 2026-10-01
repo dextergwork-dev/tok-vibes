@@ -30,7 +30,8 @@ After every call, each task Dexter owns goes into **Ops Tasks** as its own Click
   - `high`: this week, client-facing
   - `normal`: this week, internal
   - `low`: process or habit reminders
-- **Status:** leave the default (`to do`). Use `in progress` only for ongoing work Oli said to chip away at daily.
+- **Status:** always leave the default (`to do`) so every new task shows up together. Dexter moves it to `in progress` when work starts.
+- Lead the name with the word Dexter will look for (the client, or the tool/channel, e.g. `LinkedIn:` rather than `Hiring:`).
 - **Do not set** assignee or due date. Dexter does that.
 - **Description** (markdown):
   - What to do, as short bullets, with the specifics from the call (dates, batch counts, names, links)
