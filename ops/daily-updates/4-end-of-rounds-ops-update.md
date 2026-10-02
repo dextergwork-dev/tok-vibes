@@ -2,7 +2,21 @@
 
 Posted in #ops-team once the daily rounds are done: client updates, strategist check-ins, editor check-ins, and the internal ops and finance check. It shows where everything stands *now*, after the blockers were worked, not the morning list.
 
-To run it, tell Claude: "Ops update". Claude pulls the live state, drafts it in #ops-team, and you send.
+Runs on its own at 9:35am ET on weekdays, or any time you tell Claude "Ops update".
+
+## Step 1: check the rounds are done first
+
+Before pulling any data, Claude checks that Dexter has posted today in:
+- every active `-client` channel (client updates)
+- every strategy channel (strategist updates)
+- every editing channel (editor updates)
+- #finance, #billingqueue or the Ops Tasks list (internal check)
+
+If anything is missing, Claude lists the channels still waiting and checks again 30 minutes later, up to 11:30am ET. The report is only built once the rounds are done.
+
+## Step 2: build the update
+
+Claude pulls the live state, saves the update as a draft in #ops-team, and you send it.
 
 ## Rules
 
