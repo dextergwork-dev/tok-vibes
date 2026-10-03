@@ -18,7 +18,48 @@ Built from how Ivy Sprint 1 actually ran in ClickUp.
 3. Add each one to the Creator Database as **new creator**. Fill in:
    * Client, Portfolio link, Creator Email, Source
    * Scope and Rate (see the offer below)
-4. Move the best fits to **shortlist**. Keep good extras as **backup**.
+4. Write the **Scope** for this client. It feeds the outreach email.
+5. Move the best fits to **shortlist**. This sends the outreach email automatically (Make.com). Keep good extras as **backup**.
+
+### New Production Engine client? Do this before shortlisting anyone
+- [ ] Open Make.com > 2026 UGC AUTOMATION > **Shortlist Auto-Email (ClickUp)**
+- [ ] Change the **subject line** for this client
+- [ ] Swap **Example 1** and **Example 2** for this client's brief examples (still the Ivy ones)
+- [ ] Check the client is in the brand list in the subject and body (Earthling Co and Hommey are missing)
+- [ ] Update **Scope** on each creator in the ClickUp Creator Database
+- [ ] Shortlist yourself first as a test
+
+### Outreach email (sent on shortlist)
+
+**Subject:** UGC opportunity with [Client] - You're Shortlisted
+**To:** Creator Email · **Cc:** oli@tok-vibes.com
+
+> Hey [Creator Name],
+>
+> I hope you're doing well!
+>
+> We wanted to reach out because we think you'd be a great fit for a paid UGC opportunity we have available.
+>
+> Here's what we're working on:
+>
+> **Brand:** [Client]
+>
+> **Scope:** [Scope from ClickUp]
+>
+> To give you an idea of what to expect, here are two example briefs:
+> - [Example 1](https://docs.google.com/document/d/1ID3ZENQl-KyQegeffFiBo3_Pegw2mHybOLOk7mcl88I/edit?usp=sharing)
+> - [Example 2](https://docs.google.com/document/d/1qIVxX5eVbx4kwdn_5k8MUEsdkpr5K5hmEV8G_mnURVs/edit?usp=sharing)
+>
+> **Please note that these are only samples to show the structure, level of detail, and expected deliverables. Your actual brief will be customized specifically for this brand and won't be finalized until closer to filming.**
+>
+> Most briefs include two talking-to-camera concepts plus 10 to 15 B-roll clips, though the exact requirements may vary depending on the campaign.
+>
+> If you're interested, simply reply **YES** to this email and we'll send over the next steps.
+>
+> Looking forward to hearing from you!
+>
+> Warm regards,
+> The Tok-Vibes Team
 
 ## Stage 2. Outreach and offer (Ops)
 
@@ -71,8 +112,9 @@ Batch statuses in the sprint list:
 
 1. Ops puts final files in the client Drive and tracker within **30 to 60 minutes** of approval.
 2. Files sent to the client → **launched**.
-3. Pay the creator their rate (plus any approved reimbursements).
-4. Creator task → **paid - archived**.
+3. Send the creator the [invoice form](https://forms.clickup.com/90121983842/p/f/2kxv0nv2-872/16AFKVGXXRJAE8NAUU/form). They submit at least 1 day before the pay date.
+4. We pay on the **15th and 30th**, via Wise or ACH. Finance marks it Paid and the creator gets a confirmation email.
+5. Creator task → **paid - archived**.
 
 ---
 
@@ -100,5 +142,4 @@ Off-ramps for creators: **disqualified**, **not interested - rate**, **no respon
 
 ## Open items to confirm
 
-* Who pays creators and from which tool (QuickBooks is only confirmed for client invoices).
 * **send to creator**, **recording** and **production stuck** are not in the Status Bible yet. Add them to the Production Engine template so every new sprint gets them.

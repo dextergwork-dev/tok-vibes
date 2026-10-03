@@ -96,6 +96,24 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
   .row+.row::before{left:16px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.check li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:15px}
+.check li::before{content:"";width:18px;height:18px;margin-top:3px;border:1.5px solid var(--muted);border-radius:5px}
+.setup{border:1.5px solid var(--coral);border-radius:14px;padding:14px 16px;display:grid;gap:10px;background:var(--coral-tint)}
+.setup h4{margin:0;font:600 15px var(--font);color:var(--coral)}
+.mail{border:var(--border);border-radius:14px;overflow:hidden;background:#fff}
+.mail-head{display:grid;gap:4px;padding:12px 16px;border-bottom:1px solid var(--sep);background:#FCFAF5;font-size:14px}
+.mail-head span{color:var(--muted)}
+.mail-head .row-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.mail-body{padding:14px 16px;font-size:15px;display:grid;gap:10px;min-width:0;overflow-wrap:anywhere}
+.mail-body ul{margin:0;padding-left:20px}
+.var{background:var(--yellow);border-radius:4px;padding:0 4px;font-weight:500}
+.copy{font:600 13px var(--font);color:var(--bg);background:var(--fg);border:0;border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
+.copy:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+.pay{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.pay div{background:#FCFAF5;border:var(--border);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.pay small{font-size:12px;color:var(--muted);font-weight:500}
+.pay b{font-size:17px;color:var(--blue)}
 </style>
 
 <div class="wrap">
@@ -135,7 +153,8 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
             <li>Take the creator profile from the brief, like "mom with kids".</li>
             <li>Search Backstage, Instagram, X, LinkedIn or our Google Form.</li>
             <li>Add them to the Creator Database with Client, Portfolio, Email, Source, Scope and Rate.</li>
-            <li>Best fits go to shortlist. Good extras go to backup.</li>
+            <li>Write the <b>Scope</b> for this client. It goes straight into the outreach email.</li>
+            <li>Best fits go to shortlist. <b>This sends the outreach email automatically.</b> Good extras go to backup.</li>
           </ol>
           <div class="chips"><small>Creator</small><span class="chip">new creator</span><span class="chip">shortlist</span><span class="chip">backup</span></div>
         </div>
@@ -144,7 +163,44 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
       <li><details class="stage" data-roles="ops" open>
         <summary><span class="step">2</span><span class="title"><h3>Offer</h3><span>Ops</span></span><span class="chev" aria-hidden="true"></span></summary>
         <div class="body">
-          <p>Reach out and send the offer in plain terms. Here's the Ivy offer:</p>
+          <div class="setup">
+            <h4>New Production Engine client? Do this before you shortlist anyone</h4>
+            <ul class="check">
+              <li><span>Open Make.com, folder <b>2026 UGC AUTOMATION</b>, scenario <b>Shortlist Auto-Email (ClickUp)</b>.</span></li>
+              <li><span>Change the <b>subject line</b> for this client.</span></li>
+              <li><span>Swap <b>Example 1</b> and <b>Example 2</b> for this client's brief examples. They are still the Ivy ones.</span></li>
+              <li><span>Check the client is in the brand list. <b>Earthling Co</b> and <b>Hommey</b> are missing, so they would show as a number.</span></li>
+              <li><span>Update the <b>Scope</b> on each creator in ClickUp. The email pulls it from there.</span></li>
+              <li><span>Shortlist yourself first as a test and check the email.</span></li>
+            </ul>
+          </div>
+          <p>The email that goes out when a creator hits shortlist:</p>
+          <div class="mail">
+            <div class="mail-head">
+              <div class="row-top"><span>Subject</span><button type="button" class="copy" id="copy-mail">Copy email</button></div>
+              <b>UGC opportunity with <span class="var">Client</span> - You're Shortlisted</b>
+              <span>To: Creator Email · Cc: oli@tok-vibes.com</span>
+            </div>
+            <div class="mail-body" id="mail-text">
+              <p>Hey <span class="var">Creator Name</span>,</p>
+              <p>I hope you're doing well!</p>
+              <p>We wanted to reach out because we think you'd be a great fit for a paid UGC opportunity we have available.</p>
+              <p>Here's what we're working on:</p>
+              <p><b>Brand:</b> <span class="var">Client</span></p>
+              <p><b>Scope:</b> <span class="var">Scope from ClickUp</span></p>
+              <p>To give you an idea of what to expect, here are two example briefs:</p>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1ID3ZENQl-KyQegeffFiBo3_Pegw2mHybOLOk7mcl88I/edit?usp=sharing">Example 1</a></li>
+                <li><a href="https://docs.google.com/document/d/1qIVxX5eVbx4kwdn_5k8MUEsdkpr5K5hmEV8G_mnURVs/edit?usp=sharing">Example 2</a></li>
+              </ul>
+              <p><b>Please note that these are only samples to show the structure, level of detail, and expected deliverables. Your actual brief will be customized specifically for this brand and won't be finalized until closer to filming.</b></p>
+              <p>Most briefs include two talking-to-camera concepts plus 10 to 15 B-roll clips, though the exact requirements may vary depending on the campaign.</p>
+              <p>If you're interested, simply reply <b>YES</b> to this email and we'll send over the next steps.</p>
+              <p>Looking forward to hearing from you!</p>
+              <p>Warm regards,<br>The Tok-Vibes Team</p>
+            </div>
+          </div>
+          <p>When they reply, settle the details in plain terms. Here's the Ivy offer:</p>
           <div class="offer">
             <div class="offer-row"><span>Deliverables</span><span>2 scripted videos + 10 to 15 B-roll clips</span></div>
             <div class="offer-row"><span>Filming</span><span>Phone, natural, no editing needed</span></div>
@@ -211,8 +267,16 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
           <ol>
             <li>Files to the client Drive and tracker within 30 to 60 minutes of approval.</li>
             <li>Sent to the client: the batch is launched.</li>
-            <li>Pay the creator plus approved reimbursements, then archive.</li>
+            <li>Send the creator the invoice form. They submit it at least 1 day before the pay date.</li>
+            <li>Finance pays on the next run, marks it Paid, and the creator gets a confirmation email.</li>
+            <li>Archive the creator.</li>
           </ol>
+          <div class="pay">
+            <div><small>Pay dates</small><b>15th and 30th</b></div>
+            <div><small>Submit by</small><b>1 day before</b></div>
+            <div><small>Paid via</small><b>Wise or ACH</b></div>
+          </div>
+          <div class="links" style="justify-content:flex-start"><a href="https://forms.clickup.com/90121983842/p/f/2kxv0nv2-872/16AFKVGXXRJAE8NAUU/form">Invoice form</a></div>
           <div class="chips"><small>Batch</small><span class="chip">launched</span><small>Creator</small><span class="chip">paid - archived</span></div>
         </div>
       </details></li>
@@ -245,9 +309,8 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
   </section>
 
   <section class="group">
-    <h2 class="section-title">To confirm</h2>
+    <h2 class="section-title">Still open</h2>
     <div class="open">
-      <div class="note"><span>💳</span><span>How and where we pay creators. Only client invoicing in QuickBooks is documented today.</span></div>
       <div class="note"><span>🏷️</span><span>Add <b>send to creator</b>, <b>recording</b> and <b>production stuck</b> to the Status Bible and the Production Engine template.</span></div>
     </div>
   </section>
@@ -273,5 +336,12 @@ function apply(role){
   try{localStorage.setItem('creator-role',role)}catch(e){}
 }
 buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.role)));
+const copyBtn=document.getElementById('copy-mail');
+copyBtn.addEventListener('click',()=>{
+  const el=document.getElementById('mail-text');
+  const text="Subject: UGC opportunity with [Client] - You're Shortlisted\n\n"+el.innerText;
+  navigator.clipboard.writeText(text).then(()=>{copyBtn.textContent='Copied';setTimeout(()=>copyBtn.textContent='Copy email',1600)})
+  .catch(()=>{const r=document.createRange();r.selectNodeContents(el);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);copyBtn.textContent='Selected, press Ctrl+C'});
+});
 try{const r=localStorage.getItem('creator-role');if(r&&r!=='all'&&document.querySelector(`[data-role="${r}"]`))apply(r)}catch(e){}
 </script>
