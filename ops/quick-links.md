@@ -2,6 +2,8 @@
 
 * 🧭 Client onboarding: Signed → Machine Running → [Client Signed to Machine Running](https://claude.ai/artifact/WBbxJXMwQeibeREtaoWjnB)
 * 🚀 Strategist onboarding: Signed → Shipping → [New Strategist Onboarding](https://claude.ai/artifact/PpNvgvMsRB1VkE6ApwWFB2)
+* 🎥 Creator process: Sourced → Delivered → [Creator Sourcing to Delivery](https://claude.ai/artifact/NEUE9xzYTomaz4QY8YHZ5q)
+* 📄 SOP for Onboarding UGC Creators (ClickUp) → https://app.clickup.com/90121983842/docs/2kxv0nv2-32632
 * 📋 Role Playbooks (ClickUp, all Ops SOPs) → https://app.clickup.com/90121983842/docs/2kxv0nv2-772/2kxv0nv2-412
 * 🆕 New Strategist Onboarding page (ClickUp) → https://app.clickup.com/90121983842/docs/2kxv0nv2-772/2kxv0nv2-10292
 * 💬 How We Communicate (ClickUp) → https://app.clickup.com/90121983842/docs/2kxv0nv2-772/2kxv0nv2-2112
