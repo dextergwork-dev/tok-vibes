@@ -1,0 +1,261 @@
+<title>Creator Sourcing to Delivery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a single production rail, stages hang off it like takes on a shot list */
+:root{
+  --bg:#f6f7f6; --surface:#ffffff; --fg:#17201e; --muted:#5c6966; --line:#dbe1df;
+  --accent:#0f8587; --accent-soft:#e1f1f1; --warn:#c2410c; --warn-soft:#fdebe2;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111816; --surface:#18211f; --fg:#e7eeec; --muted:#9aa8a4; --line:#2b3633;
+  --accent:#4cc3c4; --accent-soft:#16302f; --warn:#f08a5d; --warn-soft:#3a2219; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111816; --surface:#18211f; --fg:#e7eeec; --muted:#9aa8a4; --line:#2b3633;
+  --accent:#4cc3c4; --accent-soft:#16302f; --warn:#f08a5d; --warn-soft:#3a2219; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 var(--body);padding:0 16px}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 64px;display:grid;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(28px,5vw,40px);font-weight:700}
+h2{font-size:22px;font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:12px}
+.lede{color:var(--muted);max-width:62ch}
+.where{display:flex;flex-wrap:wrap;gap:8px}
+.where span{font-size:13px;border:1px solid var(--line);border-radius:6px;padding:4px 10px;background:var(--surface)}
+.where b{font-weight:600}
+
+.filter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter label{font-size:13px;color:var(--muted);margin-right:4px}
+.filter button{font:500 13px var(--body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 14px;cursor:pointer}
+.filter button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.filter button:focus-visible,.copy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.rail{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.stage{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative;padding-bottom:28px;transition:opacity .2s}
+.stage::before{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--line)}
+.stage:last-child::before{display:none}
+.stage.dim{opacity:.32}
+.num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 18px var(--display);background:var(--accent-soft);color:var(--accent);border:2px solid var(--accent)}
+.card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:12px}
+.card-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline;justify-content:space-between}
+.owner{font-size:13px;color:var(--muted)}
+.owner b{color:var(--fg);font-weight:600}
+.card ol,.card ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.pill{font:500 12px/1 var(--mono);display:inline-block;padding:4px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.pill.off{background:var(--warn-soft);color:var(--warn)}
+.statuses{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.statuses small{font-size:12px;color:var(--muted);margin-right:2px}
+.offer{border-left:3px solid var(--accent);padding:10px 14px;background:var(--accent-soft);border-radius:0 8px 8px 0;font-size:14px}
+.offer ul{padding-left:18px}
+.tip{font-size:14px;color:var(--warn);font-weight:500}
+
+section{display:grid;gap:14px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td .pill{margin:2px 4px 2px 0}
+
+.owners{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.owners div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:4px;min-width:0}
+.owners b{font-family:var(--display);font-size:16px}
+.owners span{font-size:14px;color:var(--muted)}
+
+.open{display:grid;gap:10px}
+.open div{background:var(--warn-soft);border-radius:8px;padding:12px 16px;font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:16px;font-size:14px}
+a{color:var(--accent)}
+@media (max-width:480px){
+  .stage{grid-template-columns:32px 1fr;gap:12px}
+  .num{width:32px;height:32px;font-size:15px}
+  .stage::before{left:15px;top:32px}
+  .card{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){.stage{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Production Engine · UGC</span>
+    <h1>Creator Sourcing to Delivery</h1>
+    <p class="lede">How we find a creator, get them filming, and ship finished ads to the client. Seven stages, one owner each, and the ClickUp status that proves where things stand.</p>
+    <div class="where">
+      <span><b>Creators:</b> Creator Database</span>
+      <span><b>Batches:</b> client sprint list</span>
+      <span><b>Template:</b> [15] Production Engine</span>
+      <span><b>Contracts:</b> DocuSign</span>
+      <span><b>Footage:</b> Google Drive</span>
+      <span><b>Review:</b> Frame.io</span>
+    </div>
+  </header>
+
+  <div class="filter" role="group" aria-label="Show stages by owner">
+    <label>Show my stages:</label>
+    <button type="button" data-role="all" aria-pressed="true">Everyone</button>
+    <button type="button" data-role="ops" aria-pressed="false">Ops</button>
+    <button type="button" data-role="strategist" aria-pressed="false">Strategist</button>
+    <button type="button" data-role="cd" aria-pressed="false">CD</button>
+    <button type="button" data-role="editor" aria-pressed="false">Editor</button>
+    <button type="button" data-role="creator" aria-pressed="false">Creator</button>
+  </div>
+
+  <ol class="rail">
+    <li class="stage" data-roles="ops">
+      <div class="num">1</div>
+      <div class="card">
+        <div class="card-head"><h3>Source</h3><span class="owner">Owner <b>Ops</b></span></div>
+        <ol>
+          <li>Take the creator profile from the brief (e.g. "mom with kids", "with kids but no face").</li>
+          <li>Search Backstage, Instagram, X, LinkedIn or our Google Form.</li>
+          <li>Add each one to the Creator Database. Fill in Client, Portfolio, Email, Source, Scope and Rate.</li>
+          <li>Best fits go to shortlist. Good extras go to backup.</li>
+        </ol>
+        <div class="statuses"><small>Creator</small><span class="pill">new creator</span><span class="pill">shortlist</span><span class="pill">backup</span></div>
+      </div>
+    </li>
+
+    <li class="stage" data-roles="ops">
+      <div class="num">2</div>
+      <div class="card">
+        <div class="card-head"><h3>Outreach and offer</h3><span class="owner">Owner <b>Ops</b></span></div>
+        <p>Reach out, then send the offer in plain terms. The Ivy offer as an example:</p>
+        <div class="offer"><ul>
+          <li>2 short scripted videos (full brief provided) + 10 to 15 B-roll clips</li>
+          <li>Phone-filmed and natural. No studio, ring light or editing</li>
+          <li>Product purchases needed for the shoot are reimbursed</li>
+          <li>Perpetual usage rights, organic and paid, on brand channels. No whitelisting unless agreed</li>
+          <li><b>$200 for 2 scripts + B-roll</b></li>
+        </ul></div>
+        <div class="statuses"><small>Creator</small><span class="pill">in conversation</span><span class="pill off">not interested - rate</span><span class="pill off">no response</span><span class="pill off">disqualified</span></div>
+      </div>
+    </li>
+
+    <li class="stage" data-roles="ops creator">
+      <div class="num">3</div>
+      <div class="card">
+        <div class="card-head"><h3>Contract and onboard</h3><span class="owner">Owner <b>Ops</b></span></div>
+        <ol>
+          <li>Send the creator contract in DocuSign.</li>
+          <li>Once signed, link the creator to their batch tasks (Creator field).</li>
+          <li>Create their raw footage folder in Drive and paste it in Raw footage link on each batch.</li>
+        </ol>
+        <p class="tip">Always keep a backup. If a locked creator goes quiet, swap in the next one the same day.</p>
+        <div class="statuses"><small>Creator</small><span class="pill">contract sent</span><span class="pill">ready to onboard</span><span class="pill">active</span></div>
+      </div>
+    </li>
+
+    <li class="stage" data-roles="strategist cd ops">
+      <div class="num">4</div>
+      <div class="card">
+        <div class="card-head"><h3>Brief</h3><span class="owner">Owner <b>Strategist</b> · approves <b>CD</b></span></div>
+        <ol>
+          <li>Strategist writes the brief and pastes it in Brief Link.</li>
+          <li>CD reviews. Notes send it back to the strategist.</li>
+          <li>Approved brief and Drive folder go to the creator (Ops sends).</li>
+        </ol>
+        <div class="statuses"><small>Batch</small><span class="pill">briefing</span><span class="pill">brief review</span><span class="pill off">brief feedback</span><span class="pill">send to creator</span></div>
+      </div>
+    </li>
+
+    <li class="stage" data-roles="creator ops">
+      <div class="num">5</div>
+      <div class="card">
+        <div class="card-head"><h3>Film</h3><span class="owner">Owner <b>Creator</b> · chases <b>Ops</b></span></div>
+        <ol>
+          <li>Creator films to the brief and uploads raw footage to their Drive folder.</li>
+          <li>Ops checks it is complete (every script plus B-roll) and usable.</li>
+          <li>Stuck, silent or unusable footage: chase once, then swap to a backup.</li>
+        </ol>
+        <div class="statuses"><small>Batch</small><span class="pill">recording</span><span class="pill off">production stuck</span></div>
+      </div>
+    </li>
+
+    <li class="stage" data-roles="cd editor strategist">
+      <div class="num">6</div>
+      <div class="card">
+        <div class="card-head"><h3>Edit</h3><span class="owner">Owner <b>Editor</b> · approves <b>Strategist</b></span></div>
+        <ol>
+          <li>CD assigns the editor and tags them in a comment.</li>
+          <li>Editor cuts and pastes the Frame.io link. We review within 5 to 8 hours.</li>
+          <li>Strategist approves or sends notes. Editor drops finals in Drive, one subfolder per batch (e.g. B0036).</li>
+        </ol>
+        <div class="statuses"><small>Batch</small><span class="pill">ready to edit</span><span class="pill">editing</span><span class="pill">edit review</span><span class="pill off">edit feedback</span><span class="pill">approved - prep files</span></div>
+      </div>
+    </li>
+
+    <li class="stage" data-roles="ops">
+      <div class="num">7</div>
+      <div class="card">
+        <div class="card-head"><h3>Deliver and pay</h3><span class="owner">Owner <b>Ops</b></span></div>
+        <ol>
+          <li>Final files into the client Drive and tracker within 30 to 60 minutes of approval.</li>
+          <li>Files sent to the client: batch is launched.</li>
+          <li>Pay the creator their rate plus approved reimbursements, then archive them.</li>
+        </ol>
+        <div class="statuses"><small>Batch</small><span class="pill">launched</span><small>Creator</small><span class="pill">paid - archived</span></div>
+      </div>
+    </li>
+  </ol>
+
+  <section>
+    <h2>Status map</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Stage</th><th>Creator Database</th><th>Batch</th></tr></thead>
+      <tbody>
+        <tr><td>1 Source</td><td><span class="pill">new creator</span><span class="pill">shortlist</span><span class="pill">backup</span></td><td><span class="pill">not started</span></td></tr>
+        <tr><td>2 Offer</td><td><span class="pill">in conversation</span></td><td></td></tr>
+        <tr><td>3 Contract</td><td><span class="pill">contract sent</span><span class="pill">ready to onboard</span><span class="pill">active</span></td><td></td></tr>
+        <tr><td>4 Brief</td><td></td><td><span class="pill">briefing</span><span class="pill">brief review</span><span class="pill">send to creator</span></td></tr>
+        <tr><td>5 Film</td><td></td><td><span class="pill">recording</span></td></tr>
+        <tr><td>6 Edit</td><td></td><td><span class="pill">ready to edit</span><span class="pill">editing</span><span class="pill">edit review</span><span class="pill">approved - prep files</span></td></tr>
+        <tr><td>7 Deliver</td><td><span class="pill">paid - archived</span></td><td><span class="pill">launched</span></td></tr>
+        <tr><td>Off-ramps</td><td><span class="pill off">disqualified</span><span class="pill off">not interested - rate</span><span class="pill off">no response</span></td><td><span class="pill off">brief feedback</span><span class="pill off">production stuck</span><span class="pill off">edit feedback</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Who owns what</h2>
+    <div class="owners">
+      <div><b>Ops</b><span>Sourcing, offer, contract, footage folder, chasing, delivery, creator payment</span></div>
+      <div><b>Strategist</b><span>Briefs and edit approval</span></div>
+      <div><b>CD</b><span>Brief approval, assigns the editor</span></div>
+      <div><b>Editor</b><span>The cut, Frame.io link, final files</span></div>
+      <div><b>Creator</b><span>Films to brief, uploads raw footage on time</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>To confirm</h2>
+    <div class="open">
+      <div>How and where we pay creators. Only client invoicing (QuickBooks) is documented today.</div>
+      <div>Add <b>send to creator</b>, <b>recording</b> and <b>production stuck</b> to the Status Bible and the Production Engine template so every new sprint has them.</div>
+    </div>
+    <div class="links">
+      <a href="https://claude.ai/artifact/WBbxJXMwQeibeREtaoWjnB">Client Delivery Map</a>
+      <a href="https://app.clickup.com/90121983842/docs/2kxv0nv2-772/2kxv0nv2-412">Role Playbooks (Ops)</a>
+      <a href="https://app.clickup.com/90121983842/docs/2kxv0nv2-772/2kxv0nv2-12292">Status Bible</a>
+    </div>
+  </section>
+</div>
+
+<script>
+const buttons=document.querySelectorAll('.filter button');
+const stages=document.querySelectorAll('.stage');
+function apply(role){
+  buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.role===role)));
+  stages.forEach(s=>s.classList.toggle('dim',role!=='all'&&!s.dataset.roles.split(' ').includes(role)));
+  try{localStorage.setItem('creator-role',role)}catch(e){}
+}
+buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.role)));
+try{const r=localStorage.getItem('creator-role');if(r&&document.querySelector(`[data-role="${r}"]`))apply(r)}catch(e){}
+</script>
