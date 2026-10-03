@@ -4,7 +4,7 @@ How we find a UGC creator, get them filming, and ship finished ads to the client
 Built from how Ivy Sprint 1 actually ran in ClickUp.
 
 **Where it lives**
-* Creators: Production Engine > Resources & Documents > **Creator Database** (one task per creator)
+* Creators: Production Engine > Resources & Documents > [**Creator Database**](https://app.clickup.com/90121983842/v/li/901222423709) (one task per creator)
 * Batches: Production Engine > [Client] > Sprint list (one task per batch, e.g. `B0036 - UGC - Harvest Holland`)
 * New sprints start from **[15] Production Engine Template**
 * Contracts: DocuSign. Raw footage: Google Drive. Edit review: Frame.io.
@@ -15,7 +15,7 @@ Built from how Ivy Sprint 1 actually ran in ClickUp.
 
 1. Get the creator profile from the strategist's brief (e.g. "mom with kids", "with kids but no face").
 2. Find creators on **Backstage, Instagram, X, LinkedIn** or our **Google Form**.
-3. Add each one to the Creator Database as **new creator**. Fill in:
+3. Add each one to the [Creator Database](https://app.clickup.com/90121983842/v/li/901222423709) as **new creator**. Fill in:
    * Client, Portfolio link, Creator Email, Source
    * Scope and Rate (see the offer below)
 4. Write the **Scope** for this client. It feeds the outreach email.
